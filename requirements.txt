@@ -1,2 +1,2 @@
 faker
-google-cloud
+google-cloud-storage
