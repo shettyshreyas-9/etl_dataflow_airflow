@@ -1,0 +1,440 @@
+[2024-09-22T16:52:51.849+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-22T16:52:51.876+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: emp_dag.beam_dep scheduled__2024-09-21T00:00:00+00:00 [queued]>
+[2024-09-22T16:52:51.889+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: emp_dag.beam_dep scheduled__2024-09-21T00:00:00+00:00 [queued]>
+[2024-09-22T16:52:51.890+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 2
+[2024-09-22T16:52:51.909+0000] {taskinstance.py:2879} INFO - Executing <Task(BashOperator): beam_dep> on 2024-09-21 00:00:00+00:00
+[2024-09-22T16:52:51.971+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=128) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-22T16:52:51.996+0000] {standard_task_runner.py:72} INFO - Started process 135 to run task
+[2024-09-22T16:52:52.008+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'emp_dag', 'beam_dep', 'scheduled__2024-09-21T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/emp_dag.py', '--cfg-path', '/tmp/tmpn0joxlh9']
+[2024-09-22T16:52:52.010+0000] {standard_task_runner.py:105} INFO - Job 4: Subtask beam_dep
+[2024-09-22T16:52:52.342+0000] {task_command.py:467} INFO - Running <TaskInstance: emp_dag.beam_dep scheduled__2024-09-21T00:00:00+00:00 [running]> on host 3ac4fa004d82
+[2024-09-22T16:52:52.570+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***_SS' AIRFLOW_CTX_DAG_ID='emp_dag' AIRFLOW_CTX_TASK_ID='beam_dep' AIRFLOW_CTX_EXECUTION_DATE='2024-09-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-21T00:00:00+00:00'
+[2024-09-22T16:52:52.583+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-09-22T16:52:52.584+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-09-22T16:52:52.585+0000] {logging_mixin.py:190} INFO - Current task name:beam_dep state:running start_date:2024-09-22 16:52:51.876917+00:00
+[2024-09-22T16:52:52.586+0000] {logging_mixin.py:190} INFO - Dag name:emp_dag and current dag run status:running
+[2024-09-22T16:52:52.586+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-22T16:52:52.602+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-22T16:52:52.608+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'pip install apache-beam[gcp]']
+[2024-09-22T16:52:52.653+0000] {subprocess.py:86} INFO - Output:
+[2024-09-22T16:52:55.343+0000] {subprocess.py:93} INFO - Collecting apache-beam[gcp]
+[2024-09-22T16:52:55.517+0000] {subprocess.py:93} INFO -   Downloading apache_beam-2.59.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.5 kB)
+[2024-09-22T16:52:55.606+0000] {subprocess.py:93} INFO - Collecting crcmod<2.0,>=1.7 (from apache-beam[gcp])
+[2024-09-22T16:52:55.633+0000] {subprocess.py:93} INFO -   Downloading crcmod-1.7.tar.gz (89 kB)
+[2024-09-22T16:52:55.754+0000] {subprocess.py:93} INFO -   Installing build dependencies: started
+[2024-09-22T16:52:59.701+0000] {subprocess.py:93} INFO -   Installing build dependencies: finished with status 'done'
+[2024-09-22T16:52:59.703+0000] {subprocess.py:93} INFO -   Getting requirements to build wheel: started
+[2024-09-22T16:53:00.282+0000] {subprocess.py:93} INFO -   Getting requirements to build wheel: finished with status 'done'
+[2024-09-22T16:53:00.285+0000] {subprocess.py:93} INFO -   Preparing metadata (pyproject.toml): started
+[2024-09-22T16:53:00.893+0000] {subprocess.py:93} INFO -   Preparing metadata (pyproject.toml): finished with status 'done'
+[2024-09-22T16:53:01.282+0000] {subprocess.py:93} INFO - Collecting orjson<4,>=3.9.7 (from apache-beam[gcp])
+[2024-09-22T16:53:01.318+0000] {subprocess.py:93} INFO -   Downloading orjson-3.10.7-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (50 kB)
+[2024-09-22T16:53:01.392+0000] {subprocess.py:93} INFO - Collecting dill<0.3.2,>=0.3.1.1 (from apache-beam[gcp])
+[2024-09-22T16:53:01.416+0000] {subprocess.py:93} INFO -   Downloading dill-0.3.1.1.tar.gz (151 kB)
+[2024-09-22T16:53:01.480+0000] {subprocess.py:93} INFO -   Installing build dependencies: started
+[2024-09-22T16:53:04.543+0000] {subprocess.py:93} INFO -   Installing build dependencies: finished with status 'done'
+[2024-09-22T16:53:04.545+0000] {subprocess.py:93} INFO -   Getting requirements to build wheel: started
+[2024-09-22T16:53:05.115+0000] {subprocess.py:93} INFO -   Getting requirements to build wheel: finished with status 'done'
+[2024-09-22T16:53:05.117+0000] {subprocess.py:93} INFO -   Preparing metadata (pyproject.toml): started
+[2024-09-22T16:53:05.699+0000] {subprocess.py:93} INFO -   Preparing metadata (pyproject.toml): finished with status 'done'
+[2024-09-22T16:53:05.771+0000] {subprocess.py:93} INFO - Collecting cloudpickle~=2.2.1 (from apache-beam[gcp])
+[2024-09-22T16:53:05.803+0000] {subprocess.py:93} INFO -   Downloading cloudpickle-2.2.1-py3-none-any.whl.metadata (6.9 kB)
+[2024-09-22T16:53:06.051+0000] {subprocess.py:93} INFO - Collecting fastavro<2,>=0.23.6 (from apache-beam[gcp])
+[2024-09-22T16:53:06.078+0000] {subprocess.py:93} INFO -   Downloading fastavro-1.9.7-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.5 kB)
+[2024-09-22T16:53:06.167+0000] {subprocess.py:93} INFO - Collecting fasteners<1.0,>=0.3 (from apache-beam[gcp])
+[2024-09-22T16:53:06.194+0000] {subprocess.py:93} INFO -   Downloading fasteners-0.19-py3-none-any.whl.metadata (4.9 kB)
+[2024-09-22T16:53:06.222+0000] {subprocess.py:93} INFO - Requirement already satisfied: grpcio!=1.48.0,!=1.59.*,!=1.60.*,!=1.61.*,!=1.62.0,!=1.62.1,<2,>=1.33.1 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (1.65.4)
+[2024-09-22T16:53:06.476+0000] {subprocess.py:93} INFO - Collecting hdfs<3.0.0,>=2.1.0 (from apache-beam[gcp])
+[2024-09-22T16:53:06.502+0000] {subprocess.py:93} INFO -   Downloading hdfs-2.7.3.tar.gz (43 kB)
+[2024-09-22T16:53:06.554+0000] {subprocess.py:93} INFO -   Installing build dependencies: started
+[2024-09-22T16:53:09.389+0000] {subprocess.py:93} INFO -   Installing build dependencies: finished with status 'done'
+[2024-09-22T16:53:09.391+0000] {subprocess.py:93} INFO -   Getting requirements to build wheel: started
+[2024-09-22T16:53:10.019+0000] {subprocess.py:93} INFO -   Getting requirements to build wheel: finished with status 'done'
+[2024-09-22T16:53:10.020+0000] {subprocess.py:93} INFO -   Preparing metadata (pyproject.toml): started
+[2024-09-22T16:53:10.594+0000] {subprocess.py:93} INFO -   Preparing metadata (pyproject.toml): finished with status 'done'
+[2024-09-22T16:53:10.596+0000] {subprocess.py:93} INFO - Requirement already satisfied: httplib2<0.23.0,>=0.8 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (0.22.0)
+[2024-09-22T16:53:10.597+0000] {subprocess.py:93} INFO - Requirement already satisfied: jsonschema<5.0.0,>=4.0.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (4.23.0)
+[2024-09-22T16:53:10.867+0000] {subprocess.py:93} INFO - Collecting jsonpickle<4.0.0,>=3.0.0 (from apache-beam[gcp])
+[2024-09-22T16:53:10.910+0000] {subprocess.py:93} INFO -   Downloading jsonpickle-3.3.0-py3-none-any.whl.metadata (8.3 kB)
+[2024-09-22T16:53:10.944+0000] {subprocess.py:93} INFO - Requirement already satisfied: numpy<1.27.0,>=1.14.3 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (1.26.4)
+[2024-09-22T16:53:11.186+0000] {subprocess.py:93} INFO - Collecting objsize<0.8.0,>=0.6.1 (from apache-beam[gcp])
+[2024-09-22T16:53:11.210+0000] {subprocess.py:93} INFO -   Downloading objsize-0.7.0-py3-none-any.whl.metadata (12 kB)
+[2024-09-22T16:53:11.233+0000] {subprocess.py:93} INFO - Requirement already satisfied: packaging>=22.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (24.1)
+[2024-09-22T16:53:11.626+0000] {subprocess.py:93} INFO - Collecting pymongo<5.0.0,>=3.8.0 (from apache-beam[gcp])
+[2024-09-22T16:53:11.655+0000] {subprocess.py:93} INFO -   Downloading pymongo-4.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (22 kB)
+[2024-09-22T16:53:11.687+0000] {subprocess.py:93} INFO - Requirement already satisfied: proto-plus<2,>=1.7.1 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (1.24.0)
+[2024-09-22T16:53:11.688+0000] {subprocess.py:93} INFO - Requirement already satisfied: protobuf!=4.0.*,!=4.21.*,!=4.22.0,!=4.23.*,!=4.24.*,<4.26.0,>=3.20.3 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (4.25.4)
+[2024-09-22T16:53:11.742+0000] {subprocess.py:93} INFO - Collecting pydot<2,>=1.2.0 (from apache-beam[gcp])
+[2024-09-22T16:53:11.770+0000] {subprocess.py:93} INFO -   Downloading pydot-1.4.2-py2.py3-none-any.whl.metadata (8.0 kB)
+[2024-09-22T16:53:11.795+0000] {subprocess.py:93} INFO - Requirement already satisfied: python-dateutil<3,>=2.8.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (2.9.0.post0)
+[2024-09-22T16:53:11.796+0000] {subprocess.py:93} INFO - Requirement already satisfied: pytz>=2018.3 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (2024.1)
+[2024-09-22T16:53:11.797+0000] {subprocess.py:93} INFO - Requirement already satisfied: redis<6,>=5.0.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (5.0.8)
+[2024-09-22T16:53:12.336+0000] {subprocess.py:93} INFO - Collecting regex>=2020.6.8 (from apache-beam[gcp])
+[2024-09-22T16:53:12.361+0000] {subprocess.py:93} INFO -   Downloading regex-2024.9.11-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (40 kB)
+[2024-09-22T16:53:12.386+0000] {subprocess.py:93} INFO - Requirement already satisfied: requests<3.0.0,>=2.24.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (2.32.3)
+[2024-09-22T16:53:12.387+0000] {subprocess.py:93} INFO - Requirement already satisfied: typing-extensions>=3.7.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (4.12.2)
+[2024-09-22T16:53:12.515+0000] {subprocess.py:93} INFO - Collecting zstandard<1,>=0.18.0 (from apache-beam[gcp])
+[2024-09-22T16:53:12.551+0000] {subprocess.py:93} INFO -   Downloading zstandard-0.23.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.0 kB)
+[2024-09-22T16:53:12.707+0000] {subprocess.py:93} INFO - Collecting pyarrow<17.0.0,>=3.0.0 (from apache-beam[gcp])
+[2024-09-22T16:53:12.734+0000] {subprocess.py:93} INFO -   Downloading pyarrow-16.1.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+[2024-09-22T16:53:12.813+0000] {subprocess.py:93} INFO - Collecting pyarrow-hotfix<1 (from apache-beam[gcp])
+[2024-09-22T16:53:12.840+0000] {subprocess.py:93} INFO -   Downloading pyarrow_hotfix-0.6-py3-none-any.whl.metadata (3.6 kB)
+[2024-09-22T16:53:12.867+0000] {subprocess.py:93} INFO - Requirement already satisfied: cachetools<6,>=3.1.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (5.4.0)
+[2024-09-22T16:53:12.869+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-api-core<3,>=2.0.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (2.19.1)
+[2024-09-22T16:53:13.142+0000] {subprocess.py:93} INFO - Collecting google-apitools<0.5.32,>=0.5.31 (from apache-beam[gcp])
+[2024-09-22T16:53:13.167+0000] {subprocess.py:93} INFO -   Downloading google-apitools-0.5.31.tar.gz (173 kB)
+[2024-09-22T16:53:13.253+0000] {subprocess.py:93} INFO -   Installing build dependencies: started
+[2024-09-22T16:53:16.081+0000] {subprocess.py:93} INFO -   Installing build dependencies: finished with status 'done'
+[2024-09-22T16:53:16.083+0000] {subprocess.py:93} INFO -   Getting requirements to build wheel: started
+[2024-09-22T16:53:16.695+0000] {subprocess.py:93} INFO -   Getting requirements to build wheel: finished with status 'done'
+[2024-09-22T16:53:16.698+0000] {subprocess.py:93} INFO -   Preparing metadata (pyproject.toml): started
+[2024-09-22T16:53:17.248+0000] {subprocess.py:93} INFO -   Preparing metadata (pyproject.toml): finished with status 'done'
+[2024-09-22T16:53:17.251+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-auth<3,>=1.18.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (2.33.0)
+[2024-09-22T16:53:17.252+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-auth-httplib2<0.3.0,>=0.1.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (0.2.0)
+[2024-09-22T16:53:17.525+0000] {subprocess.py:93} INFO - Collecting google-cloud-datastore<3,>=2.0.0 (from apache-beam[gcp])
+[2024-09-22T16:53:17.554+0000] {subprocess.py:93} INFO -   Downloading google_cloud_datastore-2.20.1-py2.py3-none-any.whl.metadata (5.6 kB)
+[2024-09-22T16:53:17.586+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-pubsub<3,>=2.1.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (2.23.0)
+[2024-09-22T16:53:17.856+0000] {subprocess.py:93} INFO - Collecting google-cloud-pubsublite<2,>=1.2.0 (from apache-beam[gcp])
+[2024-09-22T16:53:17.883+0000] {subprocess.py:93} INFO -   Downloading google_cloud_pubsublite-1.11.1-py2.py3-none-any.whl.metadata (5.6 kB)
+[2024-09-22T16:53:17.908+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-storage<3,>=2.18.2 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (2.18.2)
+[2024-09-22T16:53:17.909+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-bigquery<4,>=2.0.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (3.20.1)
+[2024-09-22T16:53:17.981+0000] {subprocess.py:93} INFO - Collecting google-cloud-bigquery-storage<3,>=2.6.3 (from apache-beam[gcp])
+[2024-09-22T16:53:18.017+0000] {subprocess.py:93} INFO -   Downloading google_cloud_bigquery_storage-2.26.0-py2.py3-none-any.whl.metadata (5.6 kB)
+[2024-09-22T16:53:18.039+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-core<3,>=2.0.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (2.4.1)
+[2024-09-22T16:53:18.040+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-bigtable<3,>=2.19.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (2.25.0)
+[2024-09-22T16:53:18.041+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-spanner<4,>=3.0.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (3.48.0)
+[2024-09-22T16:53:18.042+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-dlp<4,>=3.0.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (3.21.0)
+[2024-09-22T16:53:18.042+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-language<3,>=2.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (2.14.0)
+[2024-09-22T16:53:18.043+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-videointelligence<3,>=2.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (2.13.5)
+[2024-09-22T16:53:18.044+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-vision<4,>=2 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (3.7.4)
+[2024-09-22T16:53:18.305+0000] {subprocess.py:93} INFO - Collecting google-cloud-recommendations-ai<0.11.0,>=0.1.0 (from apache-beam[gcp])
+[2024-09-22T16:53:18.339+0000] {subprocess.py:93} INFO -   Downloading google_cloud_recommendations_ai-0.10.12-py2.py3-none-any.whl.metadata (5.3 kB)
+[2024-09-22T16:53:18.360+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-aiplatform<2.0,>=1.26.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (1.61.0)
+[2024-09-22T16:53:18.373+0000] {subprocess.py:93} INFO - Requirement already satisfied: googleapis-common-protos<2.0.dev0,>=1.56.2 in /home/***/.local/lib/python3.12/site-packages (from google-api-core<3,>=2.0.0->apache-beam[gcp]) (1.63.2)
+[2024-09-22T16:53:18.444+0000] {subprocess.py:93} INFO - Collecting oauth2client>=1.4.12 (from google-apitools<0.5.32,>=0.5.31->apache-beam[gcp])
+[2024-09-22T16:53:18.472+0000] {subprocess.py:93} INFO -   Downloading oauth2client-4.1.3-py2.py3-none-any.whl.metadata (1.2 kB)
+[2024-09-22T16:53:18.491+0000] {subprocess.py:93} INFO - Requirement already satisfied: six>=1.12.0 in /home/***/.local/lib/python3.12/site-packages (from google-apitools<0.5.32,>=0.5.31->apache-beam[gcp]) (1.16.0)
+[2024-09-22T16:53:18.497+0000] {subprocess.py:93} INFO - Requirement already satisfied: pyasn1-modules>=0.2.1 in /home/***/.local/lib/python3.12/site-packages (from google-auth<3,>=1.18.0->apache-beam[gcp]) (0.3.0)
+[2024-09-22T16:53:18.497+0000] {subprocess.py:93} INFO - Requirement already satisfied: rsa<5,>=3.1.4 in /home/***/.local/lib/python3.12/site-packages (from google-auth<3,>=1.18.0->apache-beam[gcp]) (4.9)
+[2024-09-22T16:53:18.525+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-resource-manager<3.0.0dev,>=1.3.3 in /home/***/.local/lib/python3.12/site-packages (from google-cloud-aiplatform<2.0,>=1.26.0->apache-beam[gcp]) (1.12.5)
+[2024-09-22T16:53:18.526+0000] {subprocess.py:93} INFO - Requirement already satisfied: shapely<3.0.0dev in /home/***/.local/lib/python3.12/site-packages (from google-cloud-aiplatform<2.0,>=1.26.0->apache-beam[gcp]) (2.0.5)
+[2024-09-22T16:53:18.527+0000] {subprocess.py:93} INFO - Requirement already satisfied: pydantic<3 in /home/***/.local/lib/python3.12/site-packages (from google-cloud-aiplatform<2.0,>=1.26.0->apache-beam[gcp]) (2.8.2)
+[2024-09-22T16:53:18.528+0000] {subprocess.py:93} INFO - Requirement already satisfied: docstring-parser<1 in /home/***/.local/lib/python3.12/site-packages (from google-cloud-aiplatform<2.0,>=1.26.0->apache-beam[gcp]) (0.16)
+[2024-09-22T16:53:18.540+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-resumable-media<3.0dev,>=0.6.0 in /home/***/.local/lib/python3.12/site-packages (from google-cloud-bigquery<4,>=2.0.0->apache-beam[gcp]) (2.7.2)
+[2024-09-22T16:53:18.554+0000] {subprocess.py:93} INFO - Requirement already satisfied: grpc-google-iam-v1<1.0.0dev,>=0.12.4 in /home/***/.local/lib/python3.12/site-packages (from google-cloud-bigtable<3,>=2.19.0->apache-beam[gcp]) (0.13.1)
+[2024-09-22T16:53:18.586+0000] {subprocess.py:93} INFO - Requirement already satisfied: grpcio-status>=1.33.2 in /home/***/.local/lib/python3.12/site-packages (from google-cloud-pubsub<3,>=2.1.0->apache-beam[gcp]) (1.62.3)
+[2024-09-22T16:53:18.643+0000] {subprocess.py:93} INFO - Collecting overrides<8.0.0,>=6.0.1 (from google-cloud-pubsublite<2,>=1.2.0->apache-beam[gcp])
+[2024-09-22T16:53:18.671+0000] {subprocess.py:93} INFO -   Downloading overrides-7.7.0-py3-none-any.whl.metadata (5.8 kB)
+[2024-09-22T16:53:18.719+0000] {subprocess.py:93} INFO - Requirement already satisfied: sqlparse>=0.4.4 in /home/***/.local/lib/python3.12/site-packages (from google-cloud-spanner<4,>=3.0.0->apache-beam[gcp]) (0.5.1)
+[2024-09-22T16:53:18.722+0000] {subprocess.py:93} INFO - Requirement already satisfied: grpc-interceptor>=0.15.4 in /home/***/.local/lib/python3.12/site-packages (from google-cloud-spanner<4,>=3.0.0->apache-beam[gcp]) (0.15.4)
+[2024-09-22T16:53:18.729+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-crc32c<2.0dev,>=1.0 in /home/***/.local/lib/python3.12/site-packages (from google-cloud-storage<3,>=2.18.2->apache-beam[gcp]) (1.5.0)
+[2024-09-22T16:53:18.806+0000] {subprocess.py:93} INFO - Collecting docopt (from hdfs<3.0.0,>=2.1.0->apache-beam[gcp])
+[2024-09-22T16:53:18.830+0000] {subprocess.py:93} INFO -   Downloading docopt-0.6.2.tar.gz (25 kB)
+[2024-09-22T16:53:18.867+0000] {subprocess.py:93} INFO -   Installing build dependencies: started
+[2024-09-22T16:53:21.611+0000] {subprocess.py:93} INFO -   Installing build dependencies: finished with status 'done'
+[2024-09-22T16:53:21.612+0000] {subprocess.py:93} INFO -   Getting requirements to build wheel: started
+[2024-09-22T16:53:22.122+0000] {subprocess.py:93} INFO -   Getting requirements to build wheel: finished with status 'done'
+[2024-09-22T16:53:22.124+0000] {subprocess.py:93} INFO -   Preparing metadata (pyproject.toml): started
+[2024-09-22T16:53:22.667+0000] {subprocess.py:93} INFO -   Preparing metadata (pyproject.toml): finished with status 'done'
+[2024-09-22T16:53:22.674+0000] {subprocess.py:93} INFO - Requirement already satisfied: pyparsing!=3.0.0,!=3.0.1,!=3.0.2,!=3.0.3,<4,>=2.4.2 in /home/***/.local/lib/python3.12/site-packages (from httplib2<0.23.0,>=0.8->apache-beam[gcp]) (3.1.2)
+[2024-09-22T16:53:22.681+0000] {subprocess.py:93} INFO - Requirement already satisfied: attrs>=22.2.0 in /home/***/.local/lib/python3.12/site-packages (from jsonschema<5.0.0,>=4.0.0->apache-beam[gcp]) (24.2.0)
+[2024-09-22T16:53:22.682+0000] {subprocess.py:93} INFO - Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /home/***/.local/lib/python3.12/site-packages (from jsonschema<5.0.0,>=4.0.0->apache-beam[gcp]) (2023.12.1)
+[2024-09-22T16:53:22.682+0000] {subprocess.py:93} INFO - Requirement already satisfied: referencing>=0.28.4 in /home/***/.local/lib/python3.12/site-packages (from jsonschema<5.0.0,>=4.0.0->apache-beam[gcp]) (0.35.1)
+[2024-09-22T16:53:22.683+0000] {subprocess.py:93} INFO - Requirement already satisfied: rpds-py>=0.7.1 in /home/***/.local/lib/python3.12/site-packages (from jsonschema<5.0.0,>=4.0.0->apache-beam[gcp]) (0.20.0)
+[2024-09-22T16:53:22.719+0000] {subprocess.py:93} INFO - Requirement already satisfied: dnspython<3.0.0,>=1.16.0 in /home/***/.local/lib/python3.12/site-packages (from pymongo<5.0.0,>=3.8.0->apache-beam[gcp]) (2.6.1)
+[2024-09-22T16:53:22.734+0000] {subprocess.py:93} INFO - Requirement already satisfied: charset-normalizer<4,>=2 in /home/***/.local/lib/python3.12/site-packages (from requests<3.0.0,>=2.24.0->apache-beam[gcp]) (3.3.2)
+[2024-09-22T16:53:22.735+0000] {subprocess.py:93} INFO - Requirement already satisfied: idna<4,>=2.5 in /home/***/.local/lib/python3.12/site-packages (from requests<3.0.0,>=2.24.0->apache-beam[gcp]) (3.7)
+[2024-09-22T16:53:22.736+0000] {subprocess.py:93} INFO - Requirement already satisfied: urllib3<3,>=1.21.1 in /home/***/.local/lib/python3.12/site-packages (from requests<3.0.0,>=2.24.0->apache-beam[gcp]) (2.2.2)
+[2024-09-22T16:53:22.737+0000] {subprocess.py:93} INFO - Requirement already satisfied: certifi>=2017.4.17 in /home/***/.local/lib/python3.12/site-packages (from requests<3.0.0,>=2.24.0->apache-beam[gcp]) (2024.7.4)
+[2024-09-22T16:53:22.833+0000] {subprocess.py:93} INFO - Requirement already satisfied: pyasn1>=0.1.7 in /home/***/.local/lib/python3.12/site-packages (from oauth2client>=1.4.12->google-apitools<0.5.32,>=0.5.31->apache-beam[gcp]) (0.5.1)
+[2024-09-22T16:53:22.845+0000] {subprocess.py:93} INFO - Requirement already satisfied: annotated-types>=0.4.0 in /home/***/.local/lib/python3.12/site-packages (from pydantic<3->google-cloud-aiplatform<2.0,>=1.26.0->apache-beam[gcp]) (0.7.0)
+[2024-09-22T16:53:22.846+0000] {subprocess.py:93} INFO - Requirement already satisfied: pydantic-core==2.20.1 in /home/***/.local/lib/python3.12/site-packages (from pydantic<3->google-cloud-aiplatform<2.0,>=1.26.0->apache-beam[gcp]) (2.20.1)
+[2024-09-22T16:53:22.990+0000] {subprocess.py:93} INFO - Downloading cloudpickle-2.2.1-py3-none-any.whl (25 kB)
+[2024-09-22T16:53:23.053+0000] {subprocess.py:93} INFO - Downloading fastavro-1.9.7-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+[2024-09-22T16:53:23.491+0000] {subprocess.py:93} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 7.9 MB/s eta 0:00:00
+[2024-09-22T16:53:23.519+0000] {subprocess.py:93} INFO - Downloading fasteners-0.19-py3-none-any.whl (18 kB)
+[2024-09-22T16:53:23.583+0000] {subprocess.py:93} INFO - Downloading google_cloud_bigquery_storage-2.26.0-py2.py3-none-any.whl (239 kB)
+[2024-09-22T16:53:23.653+0000] {subprocess.py:93} INFO - Downloading google_cloud_datastore-2.20.1-py2.py3-none-any.whl (188 kB)
+[2024-09-22T16:53:23.722+0000] {subprocess.py:93} INFO - Downloading google_cloud_pubsublite-1.11.1-py2.py3-none-any.whl (304 kB)
+[2024-09-22T16:53:23.800+0000] {subprocess.py:93} INFO - Downloading google_cloud_recommendations_ai-0.10.12-py2.py3-none-any.whl (184 kB)
+[2024-09-22T16:53:24.113+0000] {subprocess.py:93} INFO - Downloading jsonpickle-3.3.0-py3-none-any.whl (42 kB)
+[2024-09-22T16:53:24.406+0000] {subprocess.py:93} INFO - Downloading objsize-0.7.0-py3-none-any.whl (11 kB)
+[2024-09-22T16:53:24.548+0000] {subprocess.py:93} INFO - Downloading orjson-3.10.7-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (142 kB)
+[2024-09-22T16:53:24.654+0000] {subprocess.py:93} INFO - Downloading pyarrow-16.1.0-cp312-cp312-manylinux_2_28_x86_64.whl (40.8 MB)
+[2024-09-22T16:53:30.717+0000] {subprocess.py:93} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.8/40.8 MB 7.5 MB/s eta 0:00:00
+[2024-09-22T16:53:30.744+0000] {subprocess.py:93} INFO - Downloading pyarrow_hotfix-0.6-py3-none-any.whl (7.9 kB)
+[2024-09-22T16:53:30.814+0000] {subprocess.py:93} INFO - Downloading pydot-1.4.2-py2.py3-none-any.whl (21 kB)
+[2024-09-22T16:53:30.872+0000] {subprocess.py:93} INFO - Downloading pymongo-4.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.9 MB)
+[2024-09-22T16:53:31.107+0000] {subprocess.py:93} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 7.9 MB/s eta 0:00:00
+[2024-09-22T16:53:31.135+0000] {subprocess.py:93} INFO - Downloading regex-2024.9.11-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (797 kB)
+[2024-09-22T16:53:31.255+0000] {subprocess.py:93} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 797.0/797.0 kB 5.9 MB/s eta 0:00:00
+[2024-09-22T16:53:31.286+0000] {subprocess.py:93} INFO - Downloading zstandard-0.23.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.4 MB)
+[2024-09-22T16:53:31.916+0000] {subprocess.py:93} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 8.6 MB/s eta 0:00:00
+[2024-09-22T16:53:31.940+0000] {subprocess.py:93} INFO - Downloading apache_beam-2.59.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.6 MB)
+[2024-09-22T16:53:33.821+0000] {subprocess.py:93} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.6/16.6 MB 8.8 MB/s eta 0:00:00
+[2024-09-22T16:53:33.844+0000] {subprocess.py:93} INFO - Downloading oauth2client-4.1.3-py2.py3-none-any.whl (98 kB)
+[2024-09-22T16:53:33.908+0000] {subprocess.py:93} INFO - Downloading overrides-7.7.0-py3-none-any.whl (17 kB)
+[2024-09-22T16:53:34.057+0000] {subprocess.py:93} INFO - Building wheels for collected packages: crcmod, dill, google-apitools, hdfs, docopt
+[2024-09-22T16:53:34.064+0000] {subprocess.py:93} INFO -   Building wheel for crcmod (pyproject.toml): started
+[2024-09-22T16:53:34.730+0000] {subprocess.py:93} INFO -   Building wheel for crcmod (pyproject.toml): finished with status 'done'
+[2024-09-22T16:53:34.731+0000] {subprocess.py:93} INFO -   Created wheel for crcmod: filename=crcmod-1.7-py3-none-any.whl size=18835 sha256=05a9d10770f1471dfddd9ebfb7bfc0ebbb85251e017e484584e37c1576c979ab
+[2024-09-22T16:53:34.732+0000] {subprocess.py:93} INFO -   Stored in directory: /home/***/.cache/pip/wheels/76/08/0b/caa8b1380122cbfe6a03eaccbec0f63c67e619af4e30ca5e2a
+[2024-09-22T16:53:34.736+0000] {subprocess.py:93} INFO -   Building wheel for dill (pyproject.toml): started
+[2024-09-22T16:53:35.352+0000] {subprocess.py:93} INFO -   Building wheel for dill (pyproject.toml): finished with status 'done'
+[2024-09-22T16:53:35.353+0000] {subprocess.py:93} INFO -   Created wheel for dill: filename=dill-0.3.1.1-py3-none-any.whl size=78543 sha256=7e7c22b3a167dc1f38496c645fa33cd670d526f705bba4485d7a75dced49d2b0
+[2024-09-22T16:53:35.353+0000] {subprocess.py:93} INFO -   Stored in directory: /home/***/.cache/pip/wheels/84/0e/3b/161164c3e023dd2f01045d3848c0f5f96f4dd9a058a2cd300b
+[2024-09-22T16:53:35.359+0000] {subprocess.py:93} INFO -   Building wheel for google-apitools (pyproject.toml): started
+[2024-09-22T16:53:36.018+0000] {subprocess.py:93} INFO -   Building wheel for google-apitools (pyproject.toml): finished with status 'done'
+[2024-09-22T16:53:36.019+0000] {subprocess.py:93} INFO -   Created wheel for google-apitools: filename=google_apitools-0.5.31-py3-none-any.whl size=131015 sha256=52d944b659c81d70866d5e9b97864a7d2ada985ab26a7edfb5a090b5a1fa3c0c
+[2024-09-22T16:53:36.019+0000] {subprocess.py:93} INFO -   Stored in directory: /home/***/.cache/pip/wheels/0c/dc/19/c0bf5a31bd534583e4b8a546b5cd77edc4b48be02727898d0a
+[2024-09-22T16:53:36.024+0000] {subprocess.py:93} INFO -   Building wheel for hdfs (pyproject.toml): started
+[2024-09-22T16:53:36.644+0000] {subprocess.py:93} INFO -   Building wheel for hdfs (pyproject.toml): finished with status 'done'
+[2024-09-22T16:53:36.646+0000] {subprocess.py:93} INFO -   Created wheel for hdfs: filename=hdfs-2.7.3-py3-none-any.whl size=34323 sha256=306f1679072d2556d08e38c5da8bc856404c2ca1cd22a6f5b00d9019d4aac373
+[2024-09-22T16:53:36.646+0000] {subprocess.py:93} INFO -   Stored in directory: /home/***/.cache/pip/wheels/97/ae/d9/536505928dd3a458b206013b02625df8f12d22fa154f2bfd65
+[2024-09-22T16:53:36.653+0000] {subprocess.py:93} INFO -   Building wheel for docopt (pyproject.toml): started
+[2024-09-22T16:53:37.218+0000] {subprocess.py:93} INFO -   Building wheel for docopt (pyproject.toml): finished with status 'done'
+[2024-09-22T16:53:37.219+0000] {subprocess.py:93} INFO -   Created wheel for docopt: filename=docopt-0.6.2-py2.py3-none-any.whl size=13706 sha256=6c4f1d3185e49770fb284cbeb06da5a2862597699987c1ffebbb5a4c92272f00
+[2024-09-22T16:53:37.220+0000] {subprocess.py:93} INFO -   Stored in directory: /home/***/.cache/pip/wheels/1a/bf/a1/4cee4f7678c68c5875ca89eaccf460593539805c3906722228
+[2024-09-22T16:53:37.222+0000] {subprocess.py:93} INFO - Successfully built crcmod dill google-apitools hdfs docopt
+[2024-09-22T16:53:37.778+0000] {subprocess.py:93} INFO - Installing collected packages: docopt, crcmod, zstandard, regex, pymongo, pydot, pyarrow-hotfix, pyarrow, overrides, orjson, objsize, jsonpickle, fasteners, fastavro, dill, cloudpickle, oauth2client, hdfs, google-apitools, apache-beam, google-cloud-recommendations-ai, google-cloud-datastore, google-cloud-bigquery-storage, google-cloud-pubsublite
+[2024-09-22T16:53:38.679+0000] {subprocess.py:93} INFO -   Attempting uninstall: pyarrow
+[2024-09-22T16:53:38.699+0000] {subprocess.py:93} INFO -     Found existing installation: pyarrow 17.0.0
+[2024-09-22T16:53:38.801+0000] {subprocess.py:93} INFO -     Uninstalling pyarrow-17.0.0:
+[2024-09-22T16:53:41.044+0000] {subprocess.py:93} INFO -       Successfully uninstalled pyarrow-17.0.0
+[2024-09-22T16:53:44.335+0000] {subprocess.py:93} INFO -   Attempting uninstall: dill
+[2024-09-22T16:53:44.347+0000] {subprocess.py:93} INFO -     Found existing installation: dill 0.3.8
+[2024-09-22T16:53:44.357+0000] {subprocess.py:93} INFO -     Uninstalling dill-0.3.8:
+[2024-09-22T16:53:44.414+0000] {subprocess.py:93} INFO -       Successfully uninstalled dill-0.3.8
+[2024-09-22T16:53:48.271+0000] {subprocess.py:93} INFO - Successfully installed apache-beam-2.59.0 cloudpickle-2.2.1 crcmod-1.7 dill-0.3.1.1 docopt-0.6.2 fastavro-1.9.7 fasteners-0.19 google-apitools-0.5.31 google-cloud-bigquery-storage-2.26.0 google-cloud-datastore-2.20.1 google-cloud-pubsublite-1.11.1 google-cloud-recommendations-ai-0.10.12 hdfs-2.7.3 jsonpickle-3.3.0 oauth2client-4.1.3 objsize-0.7.0 orjson-3.10.7 overrides-7.7.0 pyarrow-16.1.0 pyarrow-hotfix-0.6 pydot-1.4.2 pymongo-4.9.1 regex-2024.9.11 zstandard-0.23.0
+[2024-09-22T16:53:49.242+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-22T16:53:49.266+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-22T16:53:49.267+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=emp_dag, task_id=beam_dep, run_id=scheduled__2024-09-21T00:00:00+00:00, execution_date=20240921T000000, start_date=20240922T165251, end_date=20240922T165349
+[2024-09-22T16:53:49.278+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-09-22T16:53:49.279+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-09-22T16:53:49.279+0000] {logging_mixin.py:190} INFO - Dag name:emp_dag queued_at:2024-09-22 16:52:35.626655+00:00
+[2024-09-22T16:53:49.280+0000] {logging_mixin.py:190} INFO - Task hostname:3ac4fa004d82 operator:BashOperator
+[2024-09-22T16:53:49.305+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2024-09-22T16:53:49.326+0000] {taskinstance.py:3891} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-22T16:53:49.332+0000] {local_task_job_runner.py:240} INFO - ::endgroup::
+[2024-09-22T17:08:53.683+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-22T17:08:53.705+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: emp_dag.beam_dep scheduled__2024-09-21T00:00:00+00:00 [queued]>
+[2024-09-22T17:08:53.721+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: emp_dag.beam_dep scheduled__2024-09-21T00:00:00+00:00 [queued]>
+[2024-09-22T17:08:53.722+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 2
+[2024-09-22T17:08:53.739+0000] {taskinstance.py:2879} INFO - Executing <Task(BashOperator): beam_dep> on 2024-09-21 00:00:00+00:00
+[2024-09-22T17:08:53.754+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=84) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-22T17:08:53.758+0000] {standard_task_runner.py:72} INFO - Started process 90 to run task
+[2024-09-22T17:08:53.756+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'emp_dag', 'beam_dep', 'scheduled__2024-09-21T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/emp_dag.py', '--cfg-path', '/tmp/tmpmzazdkj7']
+[2024-09-22T17:08:53.763+0000] {standard_task_runner.py:105} INFO - Job 4: Subtask beam_dep
+[2024-09-22T17:08:53.937+0000] {task_command.py:467} INFO - Running <TaskInstance: emp_dag.beam_dep scheduled__2024-09-21T00:00:00+00:00 [running]> on host 47d21d915938
+[2024-09-22T17:08:54.248+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***_SS' AIRFLOW_CTX_DAG_ID='emp_dag' AIRFLOW_CTX_TASK_ID='beam_dep' AIRFLOW_CTX_EXECUTION_DATE='2024-09-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-21T00:00:00+00:00'
+[2024-09-22T17:08:54.252+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-09-22T17:08:54.253+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-09-22T17:08:54.254+0000] {logging_mixin.py:190} INFO - Current task name:beam_dep state:running start_date:2024-09-22 17:08:53.706600+00:00
+[2024-09-22T17:08:54.254+0000] {logging_mixin.py:190} INFO - Dag name:emp_dag and current dag run status:running
+[2024-09-22T17:08:54.255+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-22T17:08:54.257+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-22T17:08:54.262+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'pip install apache-beam[gcp]']
+[2024-09-22T17:08:54.301+0000] {subprocess.py:86} INFO - Output:
+[2024-09-22T17:08:57.047+0000] {subprocess.py:93} INFO - Collecting apache-beam[gcp]
+[2024-09-22T17:08:57.188+0000] {subprocess.py:93} INFO -   Downloading apache_beam-2.59.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.5 kB)
+[2024-09-22T17:08:57.297+0000] {subprocess.py:93} INFO - Collecting crcmod<2.0,>=1.7 (from apache-beam[gcp])
+[2024-09-22T17:08:57.321+0000] {subprocess.py:93} INFO -   Downloading crcmod-1.7.tar.gz (89 kB)
+[2024-09-22T17:08:57.403+0000] {subprocess.py:93} INFO -   Installing build dependencies: started
+[2024-09-22T17:09:00.922+0000] {subprocess.py:93} INFO -   Installing build dependencies: finished with status 'done'
+[2024-09-22T17:09:00.923+0000] {subprocess.py:93} INFO -   Getting requirements to build wheel: started
+[2024-09-22T17:09:01.526+0000] {subprocess.py:93} INFO -   Getting requirements to build wheel: finished with status 'done'
+[2024-09-22T17:09:01.528+0000] {subprocess.py:93} INFO -   Preparing metadata (pyproject.toml): started
+[2024-09-22T17:09:02.190+0000] {subprocess.py:93} INFO -   Preparing metadata (pyproject.toml): finished with status 'done'
+[2024-09-22T17:09:02.561+0000] {subprocess.py:93} INFO - Collecting orjson<4,>=3.9.7 (from apache-beam[gcp])
+[2024-09-22T17:09:02.591+0000] {subprocess.py:93} INFO -   Downloading orjson-3.10.7-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (50 kB)
+[2024-09-22T17:09:02.683+0000] {subprocess.py:93} INFO - Collecting dill<0.3.2,>=0.3.1.1 (from apache-beam[gcp])
+[2024-09-22T17:09:02.712+0000] {subprocess.py:93} INFO -   Downloading dill-0.3.1.1.tar.gz (151 kB)
+[2024-09-22T17:09:02.779+0000] {subprocess.py:93} INFO -   Installing build dependencies: started
+[2024-09-22T17:09:05.685+0000] {subprocess.py:93} INFO -   Installing build dependencies: finished with status 'done'
+[2024-09-22T17:09:05.686+0000] {subprocess.py:93} INFO -   Getting requirements to build wheel: started
+[2024-09-22T17:09:06.287+0000] {subprocess.py:93} INFO -   Getting requirements to build wheel: finished with status 'done'
+[2024-09-22T17:09:06.288+0000] {subprocess.py:93} INFO -   Preparing metadata (pyproject.toml): started
+[2024-09-22T17:09:07.031+0000] {subprocess.py:93} INFO -   Preparing metadata (pyproject.toml): finished with status 'done'
+[2024-09-22T17:09:07.079+0000] {subprocess.py:93} INFO - Collecting cloudpickle~=2.2.1 (from apache-beam[gcp])
+[2024-09-22T17:09:07.105+0000] {subprocess.py:93} INFO -   Downloading cloudpickle-2.2.1-py3-none-any.whl.metadata (6.9 kB)
+[2024-09-22T17:09:07.348+0000] {subprocess.py:93} INFO - Collecting fastavro<2,>=0.23.6 (from apache-beam[gcp])
+[2024-09-22T17:09:07.374+0000] {subprocess.py:93} INFO -   Downloading fastavro-1.9.7-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.5 kB)
+[2024-09-22T17:09:07.640+0000] {subprocess.py:93} INFO - Collecting fasteners<1.0,>=0.3 (from apache-beam[gcp])
+[2024-09-22T17:09:07.668+0000] {subprocess.py:93} INFO -   Downloading fasteners-0.19-py3-none-any.whl.metadata (4.9 kB)
+[2024-09-22T17:09:07.687+0000] {subprocess.py:93} INFO - Requirement already satisfied: grpcio!=1.48.0,!=1.59.*,!=1.60.*,!=1.61.*,!=1.62.0,!=1.62.1,<2,>=1.33.1 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (1.65.4)
+[2024-09-22T17:09:07.941+0000] {subprocess.py:93} INFO - Collecting hdfs<3.0.0,>=2.1.0 (from apache-beam[gcp])
+[2024-09-22T17:09:07.968+0000] {subprocess.py:93} INFO -   Downloading hdfs-2.7.3.tar.gz (43 kB)
+[2024-09-22T17:09:08.005+0000] {subprocess.py:93} INFO -   Installing build dependencies: started
+[2024-09-22T17:09:10.787+0000] {subprocess.py:93} INFO -   Installing build dependencies: finished with status 'done'
+[2024-09-22T17:09:10.788+0000] {subprocess.py:93} INFO -   Getting requirements to build wheel: started
+[2024-09-22T17:09:11.491+0000] {subprocess.py:93} INFO -   Getting requirements to build wheel: finished with status 'done'
+[2024-09-22T17:09:11.496+0000] {subprocess.py:93} INFO -   Preparing metadata (pyproject.toml): started
+[2024-09-22T17:09:12.338+0000] {subprocess.py:93} INFO -   Preparing metadata (pyproject.toml): finished with status 'done'
+[2024-09-22T17:09:12.341+0000] {subprocess.py:93} INFO - Requirement already satisfied: httplib2<0.23.0,>=0.8 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (0.22.0)
+[2024-09-22T17:09:12.342+0000] {subprocess.py:93} INFO - Requirement already satisfied: jsonschema<5.0.0,>=4.0.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (4.23.0)
+[2024-09-22T17:09:12.404+0000] {subprocess.py:93} INFO - Collecting jsonpickle<4.0.0,>=3.0.0 (from apache-beam[gcp])
+[2024-09-22T17:09:12.429+0000] {subprocess.py:93} INFO -   Downloading jsonpickle-3.3.0-py3-none-any.whl.metadata (8.3 kB)
+[2024-09-22T17:09:12.447+0000] {subprocess.py:93} INFO - Requirement already satisfied: numpy<1.27.0,>=1.14.3 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (1.26.4)
+[2024-09-22T17:09:12.681+0000] {subprocess.py:93} INFO - Collecting objsize<0.8.0,>=0.6.1 (from apache-beam[gcp])
+[2024-09-22T17:09:12.715+0000] {subprocess.py:93} INFO -   Downloading objsize-0.7.0-py3-none-any.whl.metadata (12 kB)
+[2024-09-22T17:09:12.740+0000] {subprocess.py:93} INFO - Requirement already satisfied: packaging>=22.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (24.1)
+[2024-09-22T17:09:13.212+0000] {subprocess.py:93} INFO - Collecting pymongo<5.0.0,>=3.8.0 (from apache-beam[gcp])
+[2024-09-22T17:09:13.238+0000] {subprocess.py:93} INFO -   Downloading pymongo-4.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (22 kB)
+[2024-09-22T17:09:13.269+0000] {subprocess.py:93} INFO - Requirement already satisfied: proto-plus<2,>=1.7.1 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (1.24.0)
+[2024-09-22T17:09:13.270+0000] {subprocess.py:93} INFO - Requirement already satisfied: protobuf!=4.0.*,!=4.21.*,!=4.22.0,!=4.23.*,!=4.24.*,<4.26.0,>=3.20.3 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (4.25.4)
+[2024-09-22T17:09:13.320+0000] {subprocess.py:93} INFO - Collecting pydot<2,>=1.2.0 (from apache-beam[gcp])
+[2024-09-22T17:09:13.350+0000] {subprocess.py:93} INFO -   Downloading pydot-1.4.2-py2.py3-none-any.whl.metadata (8.0 kB)
+[2024-09-22T17:09:13.372+0000] {subprocess.py:93} INFO - Requirement already satisfied: python-dateutil<3,>=2.8.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (2.9.0.post0)
+[2024-09-22T17:09:13.373+0000] {subprocess.py:93} INFO - Requirement already satisfied: pytz>=2018.3 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (2024.1)
+[2024-09-22T17:09:13.375+0000] {subprocess.py:93} INFO - Requirement already satisfied: redis<6,>=5.0.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (5.0.8)
+[2024-09-22T17:09:14.028+0000] {subprocess.py:93} INFO - Collecting regex>=2020.6.8 (from apache-beam[gcp])
+[2024-09-22T17:09:14.055+0000] {subprocess.py:93} INFO -   Downloading regex-2024.9.11-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (40 kB)
+[2024-09-22T17:09:14.083+0000] {subprocess.py:93} INFO - Requirement already satisfied: requests<3.0.0,>=2.24.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (2.32.3)
+[2024-09-22T17:09:14.084+0000] {subprocess.py:93} INFO - Requirement already satisfied: typing-extensions>=3.7.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (4.12.2)
+[2024-09-22T17:09:14.206+0000] {subprocess.py:93} INFO - Collecting zstandard<1,>=0.18.0 (from apache-beam[gcp])
+[2024-09-22T17:09:14.234+0000] {subprocess.py:93} INFO -   Downloading zstandard-0.23.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.0 kB)
+[2024-09-22T17:09:14.387+0000] {subprocess.py:93} INFO - Collecting pyarrow<17.0.0,>=3.0.0 (from apache-beam[gcp])
+[2024-09-22T17:09:14.422+0000] {subprocess.py:93} INFO -   Downloading pyarrow-16.1.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+[2024-09-22T17:09:14.685+0000] {subprocess.py:93} INFO - Collecting pyarrow-hotfix<1 (from apache-beam[gcp])
+[2024-09-22T17:09:14.717+0000] {subprocess.py:93} INFO -   Downloading pyarrow_hotfix-0.6-py3-none-any.whl.metadata (3.6 kB)
+[2024-09-22T17:09:14.740+0000] {subprocess.py:93} INFO - Requirement already satisfied: cachetools<6,>=3.1.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (5.4.0)
+[2024-09-22T17:09:14.741+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-api-core<3,>=2.0.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (2.19.1)
+[2024-09-22T17:09:15.065+0000] {subprocess.py:93} INFO - Collecting google-apitools<0.5.32,>=0.5.31 (from apache-beam[gcp])
+[2024-09-22T17:09:15.099+0000] {subprocess.py:93} INFO -   Downloading google-apitools-0.5.31.tar.gz (173 kB)
+[2024-09-22T17:09:15.180+0000] {subprocess.py:93} INFO -   Installing build dependencies: started
+[2024-09-22T17:09:18.619+0000] {subprocess.py:93} INFO -   Installing build dependencies: finished with status 'done'
+[2024-09-22T17:09:18.620+0000] {subprocess.py:93} INFO -   Getting requirements to build wheel: started
+[2024-09-22T17:09:19.418+0000] {subprocess.py:93} INFO -   Getting requirements to build wheel: finished with status 'done'
+[2024-09-22T17:09:19.420+0000] {subprocess.py:93} INFO -   Preparing metadata (pyproject.toml): started
+[2024-09-22T17:09:20.503+0000] {subprocess.py:93} INFO -   Preparing metadata (pyproject.toml): finished with status 'done'
+[2024-09-22T17:09:20.511+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-auth<3,>=1.18.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (2.33.0)
+[2024-09-22T17:09:20.512+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-auth-httplib2<0.3.0,>=0.1.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (0.2.0)
+[2024-09-22T17:09:20.831+0000] {subprocess.py:93} INFO - Collecting google-cloud-datastore<3,>=2.0.0 (from apache-beam[gcp])
+[2024-09-22T17:09:20.895+0000] {subprocess.py:93} INFO -   Downloading google_cloud_datastore-2.20.1-py2.py3-none-any.whl.metadata (5.6 kB)
+[2024-09-22T17:09:20.912+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-pubsub<3,>=2.1.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (2.23.0)
+[2024-09-22T17:09:21.206+0000] {subprocess.py:93} INFO - Collecting google-cloud-pubsublite<2,>=1.2.0 (from apache-beam[gcp])
+[2024-09-22T17:09:21.231+0000] {subprocess.py:93} INFO -   Downloading google_cloud_pubsublite-1.11.1-py2.py3-none-any.whl.metadata (5.6 kB)
+[2024-09-22T17:09:21.249+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-storage<3,>=2.18.2 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (2.18.2)
+[2024-09-22T17:09:21.250+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-bigquery<4,>=2.0.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (3.20.1)
+[2024-09-22T17:09:21.352+0000] {subprocess.py:93} INFO - Collecting google-cloud-bigquery-storage<3,>=2.6.3 (from apache-beam[gcp])
+[2024-09-22T17:09:21.390+0000] {subprocess.py:93} INFO -   Downloading google_cloud_bigquery_storage-2.26.0-py2.py3-none-any.whl.metadata (5.6 kB)
+[2024-09-22T17:09:21.410+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-core<3,>=2.0.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (2.4.1)
+[2024-09-22T17:09:21.411+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-bigtable<3,>=2.19.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (2.25.0)
+[2024-09-22T17:09:21.412+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-spanner<4,>=3.0.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (3.48.0)
+[2024-09-22T17:09:21.413+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-dlp<4,>=3.0.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (3.21.0)
+[2024-09-22T17:09:21.414+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-language<3,>=2.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (2.14.0)
+[2024-09-22T17:09:21.415+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-videointelligence<3,>=2.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (2.13.5)
+[2024-09-22T17:09:21.416+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-vision<4,>=2 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (3.7.4)
+[2024-09-22T17:09:21.722+0000] {subprocess.py:93} INFO - Collecting google-cloud-recommendations-ai<0.11.0,>=0.1.0 (from apache-beam[gcp])
+[2024-09-22T17:09:21.768+0000] {subprocess.py:93} INFO -   Downloading google_cloud_recommendations_ai-0.10.12-py2.py3-none-any.whl.metadata (5.3 kB)
+[2024-09-22T17:09:21.800+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-aiplatform<2.0,>=1.26.0 in /home/***/.local/lib/python3.12/site-packages (from apache-beam[gcp]) (1.61.0)
+[2024-09-22T17:09:21.823+0000] {subprocess.py:93} INFO - Requirement already satisfied: googleapis-common-protos<2.0.dev0,>=1.56.2 in /home/***/.local/lib/python3.12/site-packages (from google-api-core<3,>=2.0.0->apache-beam[gcp]) (1.63.2)
+[2024-09-22T17:09:21.899+0000] {subprocess.py:93} INFO - Collecting oauth2client>=1.4.12 (from google-apitools<0.5.32,>=0.5.31->apache-beam[gcp])
+[2024-09-22T17:09:21.926+0000] {subprocess.py:93} INFO -   Downloading oauth2client-4.1.3-py2.py3-none-any.whl.metadata (1.2 kB)
+[2024-09-22T17:09:21.948+0000] {subprocess.py:93} INFO - Requirement already satisfied: six>=1.12.0 in /home/***/.local/lib/python3.12/site-packages (from google-apitools<0.5.32,>=0.5.31->apache-beam[gcp]) (1.16.0)
+[2024-09-22T17:09:21.957+0000] {subprocess.py:93} INFO - Requirement already satisfied: pyasn1-modules>=0.2.1 in /home/***/.local/lib/python3.12/site-packages (from google-auth<3,>=1.18.0->apache-beam[gcp]) (0.3.0)
+[2024-09-22T17:09:21.958+0000] {subprocess.py:93} INFO - Requirement already satisfied: rsa<5,>=3.1.4 in /home/***/.local/lib/python3.12/site-packages (from google-auth<3,>=1.18.0->apache-beam[gcp]) (4.9)
+[2024-09-22T17:09:22.012+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-cloud-resource-manager<3.0.0dev,>=1.3.3 in /home/***/.local/lib/python3.12/site-packages (from google-cloud-aiplatform<2.0,>=1.26.0->apache-beam[gcp]) (1.12.5)
+[2024-09-22T17:09:22.013+0000] {subprocess.py:93} INFO - Requirement already satisfied: shapely<3.0.0dev in /home/***/.local/lib/python3.12/site-packages (from google-cloud-aiplatform<2.0,>=1.26.0->apache-beam[gcp]) (2.0.5)
+[2024-09-22T17:09:22.015+0000] {subprocess.py:93} INFO - Requirement already satisfied: pydantic<3 in /home/***/.local/lib/python3.12/site-packages (from google-cloud-aiplatform<2.0,>=1.26.0->apache-beam[gcp]) (2.8.2)
+[2024-09-22T17:09:22.016+0000] {subprocess.py:93} INFO - Requirement already satisfied: docstring-parser<1 in /home/***/.local/lib/python3.12/site-packages (from google-cloud-aiplatform<2.0,>=1.26.0->apache-beam[gcp]) (0.16)
+[2024-09-22T17:09:22.041+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-resumable-media<3.0dev,>=0.6.0 in /home/***/.local/lib/python3.12/site-packages (from google-cloud-bigquery<4,>=2.0.0->apache-beam[gcp]) (2.7.2)
+[2024-09-22T17:09:22.066+0000] {subprocess.py:93} INFO - Requirement already satisfied: grpc-google-iam-v1<1.0.0dev,>=0.12.4 in /home/***/.local/lib/python3.12/site-packages (from google-cloud-bigtable<3,>=2.19.0->apache-beam[gcp]) (0.13.1)
+[2024-09-22T17:09:22.155+0000] {subprocess.py:93} INFO - Requirement already satisfied: grpcio-status>=1.33.2 in /home/***/.local/lib/python3.12/site-packages (from google-cloud-pubsub<3,>=2.1.0->apache-beam[gcp]) (1.62.3)
+[2024-09-22T17:09:22.242+0000] {subprocess.py:93} INFO - Collecting overrides<8.0.0,>=6.0.1 (from google-cloud-pubsublite<2,>=1.2.0->apache-beam[gcp])
+[2024-09-22T17:09:22.266+0000] {subprocess.py:93} INFO -   Downloading overrides-7.7.0-py3-none-any.whl.metadata (5.8 kB)
+[2024-09-22T17:09:22.411+0000] {subprocess.py:93} INFO - Requirement already satisfied: sqlparse>=0.4.4 in /home/***/.local/lib/python3.12/site-packages (from google-cloud-spanner<4,>=3.0.0->apache-beam[gcp]) (0.5.1)
+[2024-09-22T17:09:22.425+0000] {subprocess.py:93} INFO - Requirement already satisfied: grpc-interceptor>=0.15.4 in /home/***/.local/lib/python3.12/site-packages (from google-cloud-spanner<4,>=3.0.0->apache-beam[gcp]) (0.15.4)
+[2024-09-22T17:09:22.458+0000] {subprocess.py:93} INFO - Requirement already satisfied: google-crc32c<2.0dev,>=1.0 in /home/***/.local/lib/python3.12/site-packages (from google-cloud-storage<3,>=2.18.2->apache-beam[gcp]) (1.5.0)
+[2024-09-22T17:09:22.625+0000] {subprocess.py:93} INFO - Collecting docopt (from hdfs<3.0.0,>=2.1.0->apache-beam[gcp])
+[2024-09-22T17:09:22.654+0000] {subprocess.py:93} INFO -   Downloading docopt-0.6.2.tar.gz (25 kB)
+[2024-09-22T17:09:22.700+0000] {subprocess.py:93} INFO -   Installing build dependencies: started
+[2024-09-22T17:09:27.052+0000] {subprocess.py:93} INFO -   Installing build dependencies: finished with status 'done'
+[2024-09-22T17:09:27.053+0000] {subprocess.py:93} INFO -   Getting requirements to build wheel: started
+[2024-09-22T17:09:27.671+0000] {subprocess.py:93} INFO -   Getting requirements to build wheel: finished with status 'done'
+[2024-09-22T17:09:27.672+0000] {subprocess.py:93} INFO -   Preparing metadata (pyproject.toml): started
+[2024-09-22T17:09:28.376+0000] {subprocess.py:93} INFO -   Preparing metadata (pyproject.toml): finished with status 'done'
+[2024-09-22T17:09:28.385+0000] {subprocess.py:93} INFO - Requirement already satisfied: pyparsing!=3.0.0,!=3.0.1,!=3.0.2,!=3.0.3,<4,>=2.4.2 in /home/***/.local/lib/python3.12/site-packages (from httplib2<0.23.0,>=0.8->apache-beam[gcp]) (3.1.2)
+[2024-09-22T17:09:28.396+0000] {subprocess.py:93} INFO - Requirement already satisfied: attrs>=22.2.0 in /home/***/.local/lib/python3.12/site-packages (from jsonschema<5.0.0,>=4.0.0->apache-beam[gcp]) (24.2.0)
+[2024-09-22T17:09:28.397+0000] {subprocess.py:93} INFO - Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /home/***/.local/lib/python3.12/site-packages (from jsonschema<5.0.0,>=4.0.0->apache-beam[gcp]) (2023.12.1)
+[2024-09-22T17:09:28.398+0000] {subprocess.py:93} INFO - Requirement already satisfied: referencing>=0.28.4 in /home/***/.local/lib/python3.12/site-packages (from jsonschema<5.0.0,>=4.0.0->apache-beam[gcp]) (0.35.1)
+[2024-09-22T17:09:28.399+0000] {subprocess.py:93} INFO - Requirement already satisfied: rpds-py>=0.7.1 in /home/***/.local/lib/python3.12/site-packages (from jsonschema<5.0.0,>=4.0.0->apache-beam[gcp]) (0.20.0)
+[2024-09-22T17:09:28.434+0000] {subprocess.py:93} INFO - Requirement already satisfied: dnspython<3.0.0,>=1.16.0 in /home/***/.local/lib/python3.12/site-packages (from pymongo<5.0.0,>=3.8.0->apache-beam[gcp]) (2.6.1)
+[2024-09-22T17:09:28.452+0000] {subprocess.py:93} INFO - Requirement already satisfied: charset-normalizer<4,>=2 in /home/***/.local/lib/python3.12/site-packages (from requests<3.0.0,>=2.24.0->apache-beam[gcp]) (3.3.2)
+[2024-09-22T17:09:28.453+0000] {subprocess.py:93} INFO - Requirement already satisfied: idna<4,>=2.5 in /home/***/.local/lib/python3.12/site-packages (from requests<3.0.0,>=2.24.0->apache-beam[gcp]) (3.7)
+[2024-09-22T17:09:28.454+0000] {subprocess.py:93} INFO - Requirement already satisfied: urllib3<3,>=1.21.1 in /home/***/.local/lib/python3.12/site-packages (from requests<3.0.0,>=2.24.0->apache-beam[gcp]) (2.2.2)
+[2024-09-22T17:09:28.455+0000] {subprocess.py:93} INFO - Requirement already satisfied: certifi>=2017.4.17 in /home/***/.local/lib/python3.12/site-packages (from requests<3.0.0,>=2.24.0->apache-beam[gcp]) (2024.7.4)
+[2024-09-22T17:09:28.568+0000] {subprocess.py:93} INFO - Requirement already satisfied: pyasn1>=0.1.7 in /home/***/.local/lib/python3.12/site-packages (from oauth2client>=1.4.12->google-apitools<0.5.32,>=0.5.31->apache-beam[gcp]) (0.5.1)
+[2024-09-22T17:09:28.582+0000] {subprocess.py:93} INFO - Requirement already satisfied: annotated-types>=0.4.0 in /home/***/.local/lib/python3.12/site-packages (from pydantic<3->google-cloud-aiplatform<2.0,>=1.26.0->apache-beam[gcp]) (0.7.0)
+[2024-09-22T17:09:28.584+0000] {subprocess.py:93} INFO - Requirement already satisfied: pydantic-core==2.20.1 in /home/***/.local/lib/python3.12/site-packages (from pydantic<3->google-cloud-aiplatform<2.0,>=1.26.0->apache-beam[gcp]) (2.20.1)
+[2024-09-22T17:09:28.666+0000] {subprocess.py:93} INFO - Downloading cloudpickle-2.2.1-py3-none-any.whl (25 kB)
+[2024-09-22T17:09:28.712+0000] {subprocess.py:93} INFO - Downloading fastavro-1.9.7-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+[2024-09-22T17:09:29.178+0000] {subprocess.py:93} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 8.2 MB/s eta 0:00:00
+[2024-09-22T17:09:29.206+0000] {subprocess.py:93} INFO - Downloading fasteners-0.19-py3-none-any.whl (18 kB)
+[2024-09-22T17:09:29.242+0000] {subprocess.py:93} INFO - Downloading google_cloud_bigquery_storage-2.26.0-py2.py3-none-any.whl (239 kB)
+[2024-09-22T17:09:29.300+0000] {subprocess.py:93} INFO - Downloading google_cloud_datastore-2.20.1-py2.py3-none-any.whl (188 kB)
+[2024-09-22T17:09:29.361+0000] {subprocess.py:93} INFO - Downloading google_cloud_pubsublite-1.11.1-py2.py3-none-any.whl (304 kB)
+[2024-09-22T17:09:29.426+0000] {subprocess.py:93} INFO - Downloading google_cloud_recommendations_ai-0.10.12-py2.py3-none-any.whl (184 kB)
+[2024-09-22T17:09:29.482+0000] {subprocess.py:93} INFO - Downloading jsonpickle-3.3.0-py3-none-any.whl (42 kB)
+[2024-09-22T17:09:29.517+0000] {subprocess.py:93} INFO - Downloading objsize-0.7.0-py3-none-any.whl (11 kB)
+[2024-09-22T17:09:29.551+0000] {subprocess.py:93} INFO - Downloading orjson-3.10.7-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (142 kB)
+[2024-09-22T17:09:29.603+0000] {subprocess.py:93} INFO - Downloading pyarrow-16.1.0-cp312-cp312-manylinux_2_28_x86_64.whl (40.8 MB)
+[2024-09-22T17:09:34.111+0000] {subprocess.py:93} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.8/40.8 MB 9.0 MB/s eta 0:00:00
+[2024-09-22T17:09:34.133+0000] {subprocess.py:93} INFO - Downloading pyarrow_hotfix-0.6-py3-none-any.whl (7.9 kB)
+[2024-09-22T17:09:34.170+0000] {subprocess.py:93} INFO - Downloading pydot-1.4.2-py2.py3-none-any.whl (21 kB)
+[2024-09-22T17:09:34.213+0000] {subprocess.py:93} INFO - Downloading pymongo-4.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.9 MB)
+[2024-09-22T17:09:34.445+0000] {subprocess.py:93} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 8.1 MB/s eta 0:00:00
+[2024-09-22T17:09:34.468+0000] {subprocess.py:93} INFO - Downloading regex-2024.9.11-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (797 kB)
+[2024-09-22T17:09:34.572+0000] {subprocess.py:93} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 797.0/797.0 kB 7.5 MB/s eta 0:00:00
+[2024-09-22T17:09:34.597+0000] {subprocess.py:93} INFO - Downloading zstandard-0.23.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.4 MB)
+[2024-09-22T17:09:35.215+0000] {subprocess.py:93} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 8.9 MB/s eta 0:00:00
+[2024-09-22T17:09:35.239+0000] {subprocess.py:93} INFO - Downloading apache_beam-2.59.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.6 MB)
+[2024-09-22T17:09:37.113+0000] {subprocess.py:93} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.6/16.6 MB 8.9 MB/s eta 0:00:00
+[2024-09-22T17:09:37.137+0000] {subprocess.py:93} INFO - Downloading oauth2client-4.1.3-py2.py3-none-any.whl (98 kB)
+[2024-09-22T17:09:37.185+0000] {subprocess.py:93} INFO - Downloading overrides-7.7.0-py3-none-any.whl (17 kB)
+[2024-09-22T17:09:37.290+0000] {subprocess.py:93} INFO - Building wheels for collected packages: crcmod, dill, google-apitools, hdfs, docopt
+[2024-09-22T17:09:37.291+0000] {subprocess.py:93} INFO -   Building wheel for crcmod (pyproject.toml): started
+[2024-09-22T17:09:37.945+0000] {subprocess.py:93} INFO -   Building wheel for crcmod (pyproject.toml): finished with status 'done'
+[2024-09-22T17:09:37.946+0000] {subprocess.py:93} INFO -   Created wheel for crcmod: filename=crcmod-1.7-py3-none-any.whl size=18835 sha256=d5e8972fbb94af38d40729ebc0dcdf884a64d843dcb4732115eba5fe240cdf93
+[2024-09-22T17:09:37.947+0000] {subprocess.py:93} INFO -   Stored in directory: /home/***/.cache/pip/wheels/76/08/0b/caa8b1380122cbfe6a03eaccbec0f63c67e619af4e30ca5e2a
+[2024-09-22T17:09:37.951+0000] {subprocess.py:93} INFO -   Building wheel for dill (pyproject.toml): started
+[2024-09-22T17:09:38.608+0000] {subprocess.py:93} INFO -   Building wheel for dill (pyproject.toml): finished with status 'done'
+[2024-09-22T17:09:38.609+0000] {subprocess.py:93} INFO -   Created wheel for dill: filename=dill-0.3.1.1-py3-none-any.whl size=78543 sha256=489fa5fb100ad6b0c9e34e802798b9495aff531acc5003385d447acc2c67746e
+[2024-09-22T17:09:38.610+0000] {subprocess.py:93} INFO -   Stored in directory: /home/***/.cache/pip/wheels/84/0e/3b/161164c3e023dd2f01045d3848c0f5f96f4dd9a058a2cd300b
+[2024-09-22T17:09:38.613+0000] {subprocess.py:93} INFO -   Building wheel for google-apitools (pyproject.toml): started
+[2024-09-22T17:09:39.239+0000] {subprocess.py:93} INFO -   Building wheel for google-apitools (pyproject.toml): finished with status 'done'
+[2024-09-22T17:09:39.240+0000] {subprocess.py:93} INFO -   Created wheel for google-apitools: filename=google_apitools-0.5.31-py3-none-any.whl size=131015 sha256=60cfae2c97036261956ab7997ae345e9aecb487116978961dee649a0402a5e69
+[2024-09-22T17:09:39.241+0000] {subprocess.py:93} INFO -   Stored in directory: /home/***/.cache/pip/wheels/0c/dc/19/c0bf5a31bd534583e4b8a546b5cd77edc4b48be02727898d0a
+[2024-09-22T17:09:39.246+0000] {subprocess.py:93} INFO -   Building wheel for hdfs (pyproject.toml): started
+[2024-09-22T17:09:39.841+0000] {subprocess.py:93} INFO -   Building wheel for hdfs (pyproject.toml): finished with status 'done'
+[2024-09-22T17:09:39.842+0000] {subprocess.py:93} INFO -   Created wheel for hdfs: filename=hdfs-2.7.3-py3-none-any.whl size=34323 sha256=9559fac78c8f215a390c69322442c809422d38d42e3377a8453e8505cf95fe58
+[2024-09-22T17:09:39.843+0000] {subprocess.py:93} INFO -   Stored in directory: /home/***/.cache/pip/wheels/97/ae/d9/536505928dd3a458b206013b02625df8f12d22fa154f2bfd65
+[2024-09-22T17:09:39.845+0000] {subprocess.py:93} INFO -   Building wheel for docopt (pyproject.toml): started
+[2024-09-22T17:09:40.498+0000] {subprocess.py:93} INFO -   Building wheel for docopt (pyproject.toml): finished with status 'done'
+[2024-09-22T17:09:40.499+0000] {subprocess.py:93} INFO -   Created wheel for docopt: filename=docopt-0.6.2-py2.py3-none-any.whl size=13706 sha256=5f41d6e794a1df4fb11652ae5559d88b328e95b251f9cb493a0a211382a678a9
+[2024-09-22T17:09:40.500+0000] {subprocess.py:93} INFO -   Stored in directory: /home/***/.cache/pip/wheels/1a/bf/a1/4cee4f7678c68c5875ca89eaccf460593539805c3906722228
+[2024-09-22T17:09:40.502+0000] {subprocess.py:93} INFO - Successfully built crcmod dill google-apitools hdfs docopt
+[2024-09-22T17:09:41.023+0000] {subprocess.py:93} INFO - Installing collected packages: docopt, crcmod, zstandard, regex, pymongo, pydot, pyarrow-hotfix, pyarrow, overrides, orjson, objsize, jsonpickle, fasteners, fastavro, dill, cloudpickle, oauth2client, hdfs, google-apitools, apache-beam, google-cloud-recommendations-ai, google-cloud-datastore, google-cloud-bigquery-storage, google-cloud-pubsublite
+[2024-09-22T17:09:41.758+0000] {subprocess.py:93} INFO -   Attempting uninstall: pyarrow
+[2024-09-22T17:09:41.773+0000] {subprocess.py:93} INFO -     Found existing installation: pyarrow 17.0.0
+[2024-09-22T17:09:41.843+0000] {subprocess.py:93} INFO -     Uninstalling pyarrow-17.0.0:
+[2024-09-22T17:09:43.994+0000] {subprocess.py:93} INFO -       Successfully uninstalled pyarrow-17.0.0
+[2024-09-22T17:09:46.733+0000] {subprocess.py:93} INFO -   Attempting uninstall: dill
+[2024-09-22T17:09:46.744+0000] {subprocess.py:93} INFO -     Found existing installation: dill 0.3.8
+[2024-09-22T17:09:46.759+0000] {subprocess.py:93} INFO -     Uninstalling dill-0.3.8:
+[2024-09-22T17:09:46.840+0000] {subprocess.py:93} INFO -       Successfully uninstalled dill-0.3.8
+[2024-09-22T17:09:51.260+0000] {subprocess.py:93} INFO - Successfully installed apache-beam-2.59.0 cloudpickle-2.2.1 crcmod-1.7 dill-0.3.1.1 docopt-0.6.2 fastavro-1.9.7 fasteners-0.19 google-apitools-0.5.31 google-cloud-bigquery-storage-2.26.0 google-cloud-datastore-2.20.1 google-cloud-pubsublite-1.11.1 google-cloud-recommendations-ai-0.10.12 hdfs-2.7.3 jsonpickle-3.3.0 oauth2client-4.1.3 objsize-0.7.0 orjson-3.10.7 overrides-7.7.0 pyarrow-16.1.0 pyarrow-hotfix-0.6 pydot-1.4.2 pymongo-4.9.1 regex-2024.9.11 zstandard-0.23.0
+[2024-09-22T17:09:52.507+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-22T17:09:52.542+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-22T17:09:52.544+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=emp_dag, task_id=beam_dep, run_id=scheduled__2024-09-21T00:00:00+00:00, execution_date=20240921T000000, start_date=20240922T170853, end_date=20240922T170952
+[2024-09-22T17:09:52.558+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-09-22T17:09:52.559+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-09-22T17:09:52.559+0000] {logging_mixin.py:190} INFO - Dag name:emp_dag queued_at:2024-09-22 17:08:46.838652+00:00
+[2024-09-22T17:09:52.560+0000] {logging_mixin.py:190} INFO - Task hostname:47d21d915938 operator:BashOperator
+[2024-09-22T17:09:52.575+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2024-09-22T17:09:52.596+0000] {taskinstance.py:3891} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-22T17:09:52.600+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

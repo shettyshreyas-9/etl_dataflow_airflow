@@ -1,0 +1,34 @@
+[2024-09-22T17:13:16.420+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-22T17:13:16.439+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: emp_dag.emp_data_load manual__2024-09-22T17:13:09.394288+00:00 [queued]>
+[2024-09-22T17:13:16.449+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: emp_dag.emp_data_load manual__2024-09-22T17:13:09.394288+00:00 [queued]>
+[2024-09-22T17:13:16.450+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 2
+[2024-09-22T17:13:16.466+0000] {taskinstance.py:2879} INFO - Executing <Task(BashOperator): emp_data_load> on 2024-09-22 17:13:09.394288+00:00
+[2024-09-22T17:13:16.474+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=336) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-22T17:13:16.476+0000] {standard_task_runner.py:72} INFO - Started process 338 to run task
+[2024-09-22T17:13:16.476+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'emp_dag', 'emp_data_load', 'manual__2024-09-22T17:13:09.394288+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/emp_dag.py', '--cfg-path', '/tmp/tmp3ukaxi25']
+[2024-09-22T17:13:16.477+0000] {standard_task_runner.py:105} INFO - Job 10: Subtask emp_data_load
+[2024-09-22T17:13:16.525+0000] {task_command.py:467} INFO - Running <TaskInstance: emp_dag.emp_data_load manual__2024-09-22T17:13:09.394288+00:00 [running]> on host 47d21d915938
+[2024-09-22T17:13:16.624+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***_SS' AIRFLOW_CTX_DAG_ID='emp_dag' AIRFLOW_CTX_TASK_ID='emp_data_load' AIRFLOW_CTX_EXECUTION_DATE='2024-09-22T17:13:09.394288+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-22T17:13:09.394288+00:00'
+[2024-09-22T17:13:16.626+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-09-22T17:13:16.627+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-09-22T17:13:16.628+0000] {logging_mixin.py:190} INFO - Current task name:emp_data_load state:running start_date:2024-09-22 17:13:16.440725+00:00
+[2024-09-22T17:13:16.628+0000] {logging_mixin.py:190} INFO - Dag name:emp_dag and current dag run status:running
+[2024-09-22T17:13:16.629+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-22T17:13:16.630+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-22T17:13:16.631+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/beam_scripts/emp_data_load.py']
+[2024-09-22T17:13:16.644+0000] {subprocess.py:86} INFO - Output:
+[2024-09-22T17:13:33.391+0000] {subprocess.py:93} INFO - Service account key path set to: /opt/***/cred/gcp-test.json
+[2024-09-22T17:13:33.396+0000] {subprocess.py:93} INFO - Table aceinternal-2ed449d3.sandbox_ss_eu.sample_test_1 exists.
+[2024-09-22T17:13:33.397+0000] {subprocess.py:93} INFO - No files appended
+[2024-09-22T17:13:34.270+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-22T17:13:34.306+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-22T17:13:34.309+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=emp_dag, task_id=emp_data_load, run_id=manual__2024-09-22T17:13:09.394288+00:00, execution_date=20240922T171309, start_date=20240922T171316, end_date=20240922T171334
+[2024-09-22T17:13:34.327+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-09-22T17:13:34.328+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-09-22T17:13:34.329+0000] {logging_mixin.py:190} INFO - Dag name:emp_dag queued_at:2024-09-22 17:13:09.411720+00:00
+[2024-09-22T17:13:34.330+0000] {logging_mixin.py:190} INFO - Task hostname:47d21d915938 operator:BashOperator
+[2024-09-22T17:13:34.358+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2024-09-22T17:13:34.386+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-22T17:13:34.389+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

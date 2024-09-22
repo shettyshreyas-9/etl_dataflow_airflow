@@ -1,0 +1,64 @@
+[2024-09-22T16:52:51.859+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-22T16:52:51.884+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: emp_dag.check_working_directory scheduled__2024-09-21T00:00:00+00:00 [queued]>
+[2024-09-22T16:52:51.895+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: emp_dag.check_working_directory scheduled__2024-09-21T00:00:00+00:00 [queued]>
+[2024-09-22T16:52:51.896+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 2
+[2024-09-22T16:52:51.912+0000] {taskinstance.py:2879} INFO - Executing <Task(BashOperator): check_working_directory> on 2024-09-21 00:00:00+00:00
+[2024-09-22T16:52:51.930+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=131) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-22T16:52:51.932+0000] {standard_task_runner.py:72} INFO - Started process 133 to run task
+[2024-09-22T16:52:51.933+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'emp_dag', 'check_working_directory', 'scheduled__2024-09-21T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/emp_dag.py', '--cfg-path', '/tmp/tmpxjxnzujt']
+[2024-09-22T16:52:51.935+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask check_working_directory
+[2024-09-22T16:52:52.268+0000] {task_command.py:467} INFO - Running <TaskInstance: emp_dag.check_working_directory scheduled__2024-09-21T00:00:00+00:00 [running]> on host 3ac4fa004d82
+[2024-09-22T16:52:52.599+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***_SS' AIRFLOW_CTX_DAG_ID='emp_dag' AIRFLOW_CTX_TASK_ID='check_working_directory' AIRFLOW_CTX_EXECUTION_DATE='2024-09-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-21T00:00:00+00:00'
+[2024-09-22T16:52:52.626+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-09-22T16:52:52.626+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-09-22T16:52:52.627+0000] {logging_mixin.py:190} INFO - Current task name:check_working_directory state:running start_date:2024-09-22 16:52:51.885057+00:00
+[2024-09-22T16:52:52.627+0000] {logging_mixin.py:190} INFO - Dag name:emp_dag and current dag run status:running
+[2024-09-22T16:52:52.628+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-22T16:52:52.632+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-22T16:52:52.634+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'pwd']
+[2024-09-22T16:52:52.683+0000] {subprocess.py:86} INFO - Output:
+[2024-09-22T16:52:52.690+0000] {subprocess.py:93} INFO - /tmp/***tmp9_8xu5gz
+[2024-09-22T16:52:52.691+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-22T16:52:52.736+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-22T16:52:52.737+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=emp_dag, task_id=check_working_directory, run_id=scheduled__2024-09-21T00:00:00+00:00, execution_date=20240921T000000, start_date=20240922T165251, end_date=20240922T165252
+[2024-09-22T16:52:52.755+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-09-22T16:52:52.756+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-09-22T16:52:52.757+0000] {logging_mixin.py:190} INFO - Dag name:emp_dag queued_at:2024-09-22 16:52:35.626655+00:00
+[2024-09-22T16:52:52.757+0000] {logging_mixin.py:190} INFO - Task hostname:3ac4fa004d82 operator:BashOperator
+[2024-09-22T16:52:52.793+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2024-09-22T16:52:52.809+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-22T16:52:52.812+0000] {local_task_job_runner.py:240} INFO - ::endgroup::
+[2024-09-22T17:08:53.682+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-22T17:08:53.706+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: emp_dag.check_working_directory scheduled__2024-09-21T00:00:00+00:00 [queued]>
+[2024-09-22T17:08:53.723+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: emp_dag.check_working_directory scheduled__2024-09-21T00:00:00+00:00 [queued]>
+[2024-09-22T17:08:53.724+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 2
+[2024-09-22T17:08:53.742+0000] {taskinstance.py:2879} INFO - Executing <Task(BashOperator): check_working_directory> on 2024-09-21 00:00:00+00:00
+[2024-09-22T17:08:53.756+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=86) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-22T17:08:53.761+0000] {standard_task_runner.py:72} INFO - Started process 91 to run task
+[2024-09-22T17:08:53.762+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'emp_dag', 'check_working_directory', 'scheduled__2024-09-21T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/emp_dag.py', '--cfg-path', '/tmp/tmpho42jy9w']
+[2024-09-22T17:08:53.763+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask check_working_directory
+[2024-09-22T17:08:53.878+0000] {task_command.py:467} INFO - Running <TaskInstance: emp_dag.check_working_directory scheduled__2024-09-21T00:00:00+00:00 [running]> on host 47d21d915938
+[2024-09-22T17:08:54.138+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***_SS' AIRFLOW_CTX_DAG_ID='emp_dag' AIRFLOW_CTX_TASK_ID='check_working_directory' AIRFLOW_CTX_EXECUTION_DATE='2024-09-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-21T00:00:00+00:00'
+[2024-09-22T17:08:54.140+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-09-22T17:08:54.144+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-09-22T17:08:54.146+0000] {logging_mixin.py:190} INFO - Current task name:check_working_directory state:running start_date:2024-09-22 17:08:53.711183+00:00
+[2024-09-22T17:08:54.146+0000] {logging_mixin.py:190} INFO - Dag name:emp_dag and current dag run status:running
+[2024-09-22T17:08:54.153+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-22T17:08:54.158+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-22T17:08:54.162+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'pwd']
+[2024-09-22T17:08:54.245+0000] {subprocess.py:86} INFO - Output:
+[2024-09-22T17:08:54.255+0000] {subprocess.py:93} INFO - /tmp/***tmprovtlnge
+[2024-09-22T17:08:54.256+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-22T17:08:54.316+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-22T17:08:54.317+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=emp_dag, task_id=check_working_directory, run_id=scheduled__2024-09-21T00:00:00+00:00, execution_date=20240921T000000, start_date=20240922T170853, end_date=20240922T170854
+[2024-09-22T17:08:54.336+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-09-22T17:08:54.340+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-09-22T17:08:54.346+0000] {logging_mixin.py:190} INFO - Dag name:emp_dag queued_at:2024-09-22 17:08:46.838652+00:00
+[2024-09-22T17:08:54.347+0000] {logging_mixin.py:190} INFO - Task hostname:47d21d915938 operator:BashOperator
+[2024-09-22T17:08:54.388+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2024-09-22T17:08:54.428+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-22T17:08:54.432+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

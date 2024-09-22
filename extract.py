@@ -16,7 +16,7 @@ from google.cloud import storage
 
 
 # Specify number of employees to generate
-num_employees = 10
+num_employees = 100
 
 # Create Faker instance
 fake = Faker()
