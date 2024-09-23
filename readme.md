@@ -10,10 +10,10 @@ The project aims to perform the following tasks:
 1. **Data Extraction**: Extract data using python.
 2. **Data Transformation**: Basic transformation in Cloud Dataflow before loading it into BigQuery.
 3. **Data Loading**: Load transformed data into Google BigQuery tables.
-4. **Orchestration**: Automate complete Data pipeline using Airflow ( Cloud Compute Engine )
+4. **Orchestration**: Automate complete Data pipeline using Airflow (Cloud Compute Engine)
 
-![image](https://github.com/shettyshreyas-9/etl-dataflow-airflow/assets/143475073/techstack.png)
+![image](https://github.com/shettyshreyas-9/etl-dataflow-airflow/assets/techstack.png)
 
 ## Architecture
 
-![image](https://github.com/shettyshreyas-9/etl-dataflow-airflow/assets/143475073/architecture.png)
+![image](https://github.com/shettyshreyas-9/etl-dataflow-airflow/assets/architecture.png)
