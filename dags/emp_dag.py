@@ -50,7 +50,7 @@ with DAG(
     
     beam_dep = BashOperator(
         task_id='beam_dep',
-        bash_command='pip install apache-beam[gcp] faker'
+        bash_command='pip install apache-beam[gcp] faker pyarrow'
     )
 
 

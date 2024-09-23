@@ -62,7 +62,7 @@ def copy_files_to_container(container_name):
         # Replace the following with the path to the files you want to copy
         source_path_dags = "/app/dags"
         source_path_beam_scripts = "/app/beam_scripts"
-        source_path_beam_keys = "/app/keys"
+        source_path_beam_keys = "/app/cred"
         
         # Copy files to the specified container
         subprocess.run(["docker", "cp", source_path_dags, f"{container_name}:/opt/airflow/"], check=True)
@@ -72,7 +72,7 @@ def copy_files_to_container(container_name):
         print(f"beam Files copied to {container_name}")
     
         subprocess.run(["docker", "cp", source_path_beam_keys, f"{container_name}:/opt/airflow/"], check=True)
-        print(f"key Files copied to {container_name}")
+        print(f"cred Files copied to {container_name}")
 
     except subprocess.CalledProcessError as e:
         print(f"Failed to copy files to {container_name}: {e}")
