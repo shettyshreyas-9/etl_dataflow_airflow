@@ -50,10 +50,15 @@ with DAG(
     
     beam_dep = BashOperator(
         task_id='beam_dep',
-        bash_command='pip install apache-beam[gcp]'
+        bash_command='pip install apache-beam[gcp] faker'
     )
 
 
-    beam_dep >> emp_data_load
+    extract_dump = BashOperator(
+        task_id='extract_dump',
+        bash_command='python3 /opt/airflow/beam_scripts/extract.py'
+    )
+
+    beam_dep >> extract_dump >> emp_data_load
 
     

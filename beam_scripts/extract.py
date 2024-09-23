@@ -7,12 +7,12 @@ import csv
 from google.cloud import storage
 
 
-# try:
-#     SERVICE_ACCOUNT_KEY_PATH = '/opt/airflow/cred/gcp-test.json'
-#     os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = SERVICE_ACCOUNT_KEY_PATH
-#     print(f"Service account key path set to: {SERVICE_ACCOUNT_KEY_PATH}")
-# except Exception as e:
-#     print(f"An error occurred while setting the service account key path: {e}")
+try:
+    SERVICE_ACCOUNT_KEY_PATH = '/opt/airflow/cred/gcp-test.json'
+    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = SERVICE_ACCOUNT_KEY_PATH
+    print(f"Service account key path set to: {SERVICE_ACCOUNT_KEY_PATH}")
+except Exception as e:
+    print(f"An error occurred while setting the service account key path: {e}")
 
 
 # Specify number of employees to generate

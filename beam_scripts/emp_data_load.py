@@ -45,7 +45,7 @@ def transform_load(file_name):
         '--job_name=etl-df-af-1',
         '--staging_location=gs://sn_insights_test/staging',
         '--temp_location=gs://sn_insights_test/temp',
-        '--runner=DataflowRunner',
+        # '--runner=DataflowRunner',
         '--region=europe-west2',
     ])
 
