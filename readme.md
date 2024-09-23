@@ -12,8 +12,8 @@ The project aims to perform the following tasks:
 3. **Data Loading**: Load transformed data into Google BigQuery tables.
 4. **Orchestration**: Automate complete Data pipeline using Airflow (Cloud Compute Engine)
 
-![image](https://github.com/shettyshreyas-9/etl_dataflow_airflow/assets/techstack.png)
+![image](https://github.com/shettyshreyas-9/etl_dataflow_airflow/tree/main/assets/techstack.png)
 
 ## Architecture
 
-![image](https://github.com/shettyshreyas-9/etl_dataflow_airflow/assets/architecture.png)
+![image](https://github.com/shettyshreyas-9/etl_dataflow_airflow/tree/main/assets/architecture.png)
