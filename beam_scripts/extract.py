@@ -7,7 +7,7 @@ import csv
 from google.cloud import storage
 
 
-try:
+try: 
     SERVICE_ACCOUNT_KEY_PATH = '/opt/airflow/cred/gcp-test.json'
     os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = SERVICE_ACCOUNT_KEY_PATH
     print(f"Service account key path set to: {SERVICE_ACCOUNT_KEY_PATH}")
@@ -58,6 +58,6 @@ def upload_to_gcs(bucket_name, source_file_name, destination_blob_name):
 # GCS bucket , source & destination file name
 bucket_name= 'sn_insights_test'
 source_file_name= 'sample_test_1.csv'
-destination_blob_name = 'etl_df_af/sample_test_1.csv'
+destination_blob_name = 'etl_df_af/sample_test_14.csv'
 
 upload_to_gcs(bucket_name, source_file_name, destination_blob_name)
